@@ -1,26 +1,25 @@
 while (xerath.isAlive()) {
   if (xerath.enemyChampNearby()) {
     xerath.rotate(360); // mom get the camera
-    xerath.press('Q');
+    xerath.press('q');
   } else {
-    xerath.spamEmote(); //Blitzcrank question mark emote tilts people well
-    xerath.spamMastery(); //mastery 7 works best
+    xerath.spamEmote(); // Blitzcrank question mark emote tilts people well
+    xerath.spamMastery(); // Mastery 7 works best
     xerath.runItDown();
   }
-  if (xerath.qIsDown()){  
+  // Recall if q is on cooldown
+  if (xerath.isDown('q')){  
 	xerath.press('b');
   }
-  if (xerath.bootyDeprived()) {
-	while(!xerath.gotBooty()) {
-	  xerath.typeInChat("Give me da booty!!!!");
-	}
+  while(xerath.bootyNourished == false) {
+    xerath.typeInChat("Give me da booty!!!!");
   }
   if (xerath.killCount() > 0) {
 	xerath.typeInChat("Booty received");
-	xerath.bootyNourished();
+	xerath.bootyNourished = true;
   }
   // Boss Chan pls review
-  if(playingWithJoseph()){
+  if (playingWithJoseph()){
 	  xerath.getKill();
 	  xerath.int();
 	  xerath.int();
