@@ -1,8 +1,8 @@
 public class Xerath{
   boolean isAlive;
-  int KDA;
+  int kda;
   public Xerath(){
      isAlive = true;
-     kda = 000
+     kda = 000;
   }
 }
