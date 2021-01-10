@@ -1,3 +1,4 @@
+xerath.typeInChat("/ignore all"); // Prevents the scripts from getting tilted
 while (xerath.isAlive()) {
   if (xerath.enemyChampNearby()) {
     xerath.rotate(360); // mom get the camera
